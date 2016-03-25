@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/microsite_key_speakers_header_1"
+            style="@style/EventMicrositeHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:id="@+id/microsite_key_speakers_para_1"
+            style="@style/EventMicrositeParaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/microsite_key_speakers_header_2"
+            style="@style/EventMicrositeHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/microsite_key_speakers_para_2"
+            style="@style/EventMicrositeParaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/microsite_key_speakers_image_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/speakers_image"
+            android:layout_marginBottom="@dimen/_8dp"
+            android:contentDescription="@string/key_speakers"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/microsite_key_speakers_header_3"
+            style="@style/EventMicrositeHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/microsite_key_speakers_para_3"
+            style="@style/EventMicrositeParaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/microsite_key_speakers_image_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/speakers_image"
+            android:layout_marginBottom="@dimen/_8dp"
+            android:contentDescription="@string/key_speakers"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/microsite_key_speakers_image_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/speakers_image"
+            android:layout_marginBottom="@dimen/_8dp"
+            android:contentDescription="@string/key_speakers"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/microsite_key_speakers_header_4"
+            style="@style/EventMicrositeHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/microsite_key_speakers_para_4"
+            style="@style/EventMicrositeParaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/microsite_key_speakers_image_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/speakers_image"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:contentDescription="@string/key_speakers"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/_8dp"
+    android:layout_marginRight="@dimen/_8dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="@dimen/_2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/banner_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/event_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/banner_image_view"
+                android:contentDescription="@string/banner_image"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:id="@+id/event_card_image_text_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#EE73B2D6"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_12dp"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/_12dp">
+
+                <TextView
+                    android:id="@+id/event_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_20sp"
+                    tools:text="Clearwater Beach" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/event_city"
+                        style="@style/EventDiscoveryBannerSubText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="Bengaluru" />
+
+                    <TextView
+                        android:id="@+id/event_day"
+                        style="@style/EventDiscoveryBannerSubText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        tools:text="Tuesday" />
+
+                </TableRow>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/event_full_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/banner_frame_layout"
+            android:paddingBottom="@dimen/_3dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:textSize="@dimen/_16sp"
+            tools:text="12, 16th Main Road, Banashankari, Bengaluru, Karnataka, India, 560070" />
+
+        <TextView
+            android:id="@+id/event_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_full_address"
+            android:paddingBottom="@dimen/_4dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/_3dp"
+            android:textColor="@color/black_lighter"
+            android:textSize="@dimen/_14sp"
+            tools:text="Mar 29th - Oct 30th 2016" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_date"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_8dp">
+
+            <Button
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tickets"
+                android:textColor="@color/button_light_red" />
+
+            <Button
+                android:id="@+id/event_location_button"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2dp"
+                android:layout_marginRight="@dimen/_2dp"
+                android:text="@string/location"
+                android:textColor="@color/button_light_red" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

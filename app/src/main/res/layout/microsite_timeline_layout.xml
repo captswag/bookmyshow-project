@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/microsite_timeline_header_1"
+            style="@style/EventMicrositeHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:id="@+id/microsite_timeline_para_1"
+            style="@style/EventMicrositeParaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/microsite_timeline_header_2"
+            style="@style/EventMicrositeHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/microsite_timeline_para_2"
+            style="@style/EventMicrositeParaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/_2dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_12dp"
+                android:background="@color/amber_500" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_1_header_1"
+                            style="@style/EventMicrositeTimelineHeaderText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_1_time_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/_4dp"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_1_para1"
+                            style="@style/EventMicrositeTimelineParaText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_1_header_2"
+                            style="@style/EventMicrositeTimelineHeaderText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_1_time_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/_4dp"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_1_para2"
+                            style="@style/EventMicrositeTimelineParaText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/microsite_timeline_header_3"
+            style="@style/EventMicrositeHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/microsite_timeline_para_3"
+            style="@style/EventMicrositeParaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/timeline_line_1"
+                android:layout_width="@dimen/_2dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_12dp"
+                android:background="@color/amber_500" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_header_1"
+                            style="@style/EventMicrositeTimelineHeaderText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_time_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/_4dp"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_para1"
+                            style="@style/EventMicrositeTimelineParaText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_header_2"
+                            style="@style/EventMicrositeTimelineHeaderText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_time_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/_4dp"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_para2"
+                            style="@style/EventMicrositeTimelineParaText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_header_3"
+                            style="@style/EventMicrositeTimelineHeaderText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_time_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/_4dp"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_para3"
+                            style="@style/EventMicrositeTimelineParaText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/activity_horizontal_margin">
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_header_4"
+                            style="@style/EventMicrositeTimelineHeaderText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_time_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/_4dp"
+                            android:textSize="@dimen/_12sp" />
+
+                        <TextView
+                            android:id="@+id/microsite_timeline_2_para4"
+                            style="@style/EventMicrositeTimelineParaText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/microsite_timeline_header_4"
+            style="@style/EventMicrositeHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/microsite_timeline_para_4"
+            style="@style/EventMicrositeParaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

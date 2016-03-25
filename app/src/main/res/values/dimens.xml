@@ -1,0 +1,22 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- View sizes -->
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="_3dp">3dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+
+    <dimen name="sub_banner_imageview">130dp</dimen>
+    <dimen name="speakers_image">180dp</dimen>
+    <dimen name="banner_image_view">260dp</dimen>
+
+    <!-- Font Sizes -->
+    <dimen name="_12sp">12sp</dimen>
+    <dimen name="_14sp">14sp</dimen>
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+</resources>

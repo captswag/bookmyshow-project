@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Project Demo (Anjith)</string>
+
+    <string name="banner_image">Banner Image</string>
+    <string name="tickets">Tickets</string>
+    <string name="location">Location</string>
+    <string name="key_speakers">Key Speakers</string>
+    <string name="sponsors_list">Sponsors List</string>
+</resources>
