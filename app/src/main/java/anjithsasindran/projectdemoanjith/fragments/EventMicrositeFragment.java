@@ -13,21 +13,27 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import anjithsasindran.projectdemoanjith.R;
 import anjithsasindran.projectdemoanjith.adapters.EventMicrositePagerAdapter;
 import anjithsasindran.projectdemoanjith.constants.Constants;
+import anjithsasindran.projectdemoanjith.helpers.ApiHelper;
 import anjithsasindran.projectdemoanjith.helpers.EventsMicrositeDataHelper;
-import anjithsasindran.projectdemoanjith.helpers.JsonReaderFromAssets;
 import anjithsasindran.projectdemoanjith.models.eventsmicrosite.EventMicrositeModel;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by Anjith Sasindran
  * on 22-Mar-16.
+ * EventMicrositeFragment is inflated once a card from EventDiscoveryFragment is selected
  */
 public class EventMicrositeFragment extends Fragment {
 
@@ -37,6 +43,7 @@ public class EventMicrositeFragment extends Fragment {
     Bundle bundle;
     ViewPager mViewPager;
     TabLayout mTabLayout;
+    ProgressBar progressBar;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -53,6 +60,7 @@ public class EventMicrositeFragment extends Fragment {
         mToolbar = (Toolbar) view.findViewById(R.id.microsite_toolbar);
         mViewPager = (ViewPager) view.findViewById(R.id.microsite_view_pager);
         mTabLayout = (TabLayout) view.findViewById(R.id.microsite_tab_layout);
+        progressBar = (ProgressBar) view.findViewById(R.id.microsite_progress_bar);
 
         setHasOptionsMenu(true);
         ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
@@ -65,7 +73,7 @@ public class EventMicrositeFragment extends Fragment {
 
         mToolbar.setTitle(bundle.getString("event_name"));
 
-        setUpDataFromJson();
+        setupDataFromServer();
         return view;
     }
 
@@ -77,21 +85,57 @@ public class EventMicrositeFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
-    public void setUpDataFromJson() {
-        String json = JsonReaderFromAssets.loadJson(getContext(), Constants.eventMicrositeJson);
+    public void setupDataFromServer() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Constants.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
-        if (json != null) {
-            EventMicrositeModel eventMicrositeModel = new Gson()
-                    .fromJson(json, EventMicrositeModel.class);
+        ApiHelper eventMicrositeApi = retrofit.create(ApiHelper.class);
 
-            EventsMicrositeDataHelper micrositeDataHelper = new EventsMicrositeDataHelper();
+        Call<EventMicrositeModel> micrositeModelCall = eventMicrositeApi.requestMicrositeEvents();
 
-            mViewPager.setAdapter(new EventMicrositePagerAdapter(getActivity()
-                    .getSupportFragmentManager(),
-                    micrositeDataHelper.setupDataForViewPager(eventMicrositeModel.getData())));
-            mTabLayout.setupWithViewPager(mViewPager);
-        } else {
-            Toast.makeText(getContext(), "Failed to load data", Toast.LENGTH_SHORT).show();
-        }
+        micrositeModelCall.enqueue(new Callback<EventMicrositeModel>() {
+            @Override
+            public void onResponse(Call<EventMicrositeModel> call, Response<EventMicrositeModel> response) {
+                if (getActivity() != null) {
+                    if (response.isSuccessful()) {
+                        EventsMicrositeDataHelper micrositeDataHelper = new EventsMicrositeDataHelper();
+                        mViewPager.setAdapter(new EventMicrositePagerAdapter(getActivity()
+                                .getSupportFragmentManager(),
+                                micrositeDataHelper.setupDataForViewPager(response.body().getData())));
+                        mTabLayout.setupWithViewPager(mViewPager);
+                        progressBar.setVisibility(View.GONE);
+                        mViewPager.setVisibility(View.VISIBLE);
+                    } else {
+                        Toast.makeText(getContext(), "Failed to load data", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<EventMicrositeModel> call, Throwable t) {
+                if (getActivity() != null)
+                    Toast.makeText(getContext(), "Failed to load data", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
+
+//    public void setUpDataFromJson() {
+//        String json = JsonReaderFromAssets.loadJson(getContext(), Constants.EVENT_MICROSITE_JSON);
+//
+//        if (json != null) {
+//            EventMicrositeModel eventMicrositeModel = new Gson()
+//                    .fromJson(json, EventMicrositeModel.class);
+//
+//            EventsMicrositeDataHelper micrositeDataHelper = new EventsMicrositeDataHelper();
+//
+//            mViewPager.setAdapter(new EventMicrositePagerAdapter(getActivity()
+//                    .getSupportFragmentManager(),
+//                    micrositeDataHelper.setupDataForViewPager(eventMicrositeModel.getData())));
+//            mTabLayout.setupWithViewPager(mViewPager);
+//        } else {
+//            Toast.makeText(getContext(), "Failed to load data", Toast.LENGTH_SHORT).show();
+//        }
+//    }
 }

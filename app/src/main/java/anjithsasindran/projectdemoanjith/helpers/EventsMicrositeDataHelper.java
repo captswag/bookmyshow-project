@@ -16,6 +16,8 @@ import anjithsasindran.projectdemoanjith.parcelable.MicrositeTimeline;
 /**
  * Created by Anjith Sasindran
  * on 23-Mar-16.
+ * EventMicrositeDataHelper contains all the data needed for ViewPager in
+ * EventMicrositeFragment. It returns an ArrayList of Objects.
  */
 public class EventsMicrositeDataHelper {
 

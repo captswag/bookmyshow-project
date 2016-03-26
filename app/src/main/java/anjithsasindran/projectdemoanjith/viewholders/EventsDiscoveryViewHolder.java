@@ -13,6 +13,7 @@ import anjithsasindran.projectdemoanjith.R;
 /**
  * Created by Anjith Sasindran
  * on 20-Mar-16.
+ * ViewHolder for EventDisoveryFragment RecyclerView adapter.
  */
 public class EventsDiscoveryViewHolder extends RecyclerView.ViewHolder {
 

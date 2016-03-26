@@ -6,6 +6,7 @@ import android.os.Parcelable;
 /**
  * Created by Anjith Sasindran
  * on 24-Mar-16.
+ * Parcelable data passed to MicrositeKeySpeakers
  */
 public class MicrositeKeySpeakers implements Parcelable {
 

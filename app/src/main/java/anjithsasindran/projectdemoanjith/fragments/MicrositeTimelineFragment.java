@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import anjithsasindran.projectdemoanjith.R;
-import anjithsasindran.projectdemoanjith.helpers.ParseToCalendar;
+import anjithsasindran.projectdemoanjith.helpers.ParseToCalendarHelper;
 import anjithsasindran.projectdemoanjith.helpers.TimelineHelper;
 import anjithsasindran.projectdemoanjith.parcelable.MicrositeTimeline;
 
@@ -96,23 +96,24 @@ public class MicrositeTimelineFragment extends Fragment {
         timelinePara4.setText(timeline.getTimelinePara4());
         timelinePara5.setText(timeline.getTimelinePara5());
         timelinePara6.setText(timeline.getTimelinePara6());
+
         timelineTime1.setText(TimelineHelper.
-                getFormattedTime(ParseToCalendar.
-                        convertStringDateToCalendar(timeline.getTimelineDate1())));
+                getFormattedTime(ParseToCalendarHelper.
+                        convertStringDateForTimelineToCalendar(timeline.getTimelineDate1())));
         timelineTime2.setText(TimelineHelper.
-                getFormattedTime(ParseToCalendar.
-                        convertStringDateToCalendar(timeline.getTimelineDate2())));
+                getFormattedTime(ParseToCalendarHelper.
+                        convertStringDateForTimelineToCalendar(timeline.getTimelineDate2())));
         timelineTime3.setText(TimelineHelper.
-                getFormattedTime(ParseToCalendar.
-                        convertStringDateToCalendar(timeline.getTimelineDate3())));
+                getFormattedTime(ParseToCalendarHelper.
+                        convertStringDateForTimelineToCalendar(timeline.getTimelineDate3())));
         timelineTime4.setText(TimelineHelper.
-                getFormattedTime(ParseToCalendar.
-                        convertStringDateToCalendar(timeline.getTimelineDate4())));
+                getFormattedTime(ParseToCalendarHelper.
+                        convertStringDateForTimelineToCalendar(timeline.getTimelineDate4())));
         timelineTime5.setText(TimelineHelper.
-                getFormattedTime(ParseToCalendar.
-                        convertStringDateToCalendar(timeline.getTimelineDate5())));
+                getFormattedTime(ParseToCalendarHelper.
+                        convertStringDateForTimelineToCalendar(timeline.getTimelineDate5())));
         timelineTime6.setText(TimelineHelper.
-                getFormattedTime(ParseToCalendar.
-                        convertStringDateToCalendar(timeline.getTimelineDate6())));
+                getFormattedTime(ParseToCalendarHelper.
+                        convertStringDateForTimelineToCalendar(timeline.getTimelineDate6())));
     }
 }

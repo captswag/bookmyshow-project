@@ -3,13 +3,14 @@ package anjithsasindran.projectdemoanjith.helpers;
 import java.util.ArrayList;
 import java.util.List;
 
-import anjithsasindran.projectdemoanjith.EventDetails;
+import anjithsasindran.projectdemoanjith.models.EventDetails;
 import anjithsasindran.projectdemoanjith.models.events.Datum;
 
 /**
  * Created by Anjith Sasindran
  * on 20-Mar-16.
  * Helper class for creating list of EventDetails, which is passed to EventDetailsAdapter
+ * Since the server provides with lot of data, only the required datas are taken.
  */
 public class EventsListHelper {
 

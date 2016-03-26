@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mFragmentManager = getSupportFragmentManager();
-        setUpEventsList();
+        setupEventDiscoveryFragment();
     }
 
-    public void setUpEventsList() {
+    public void setupEventDiscoveryFragment() {
         mFragmentManager.beginTransaction()
                 .add(R.id.root_container, new EventDiscoveryFragment())
                 .commit();

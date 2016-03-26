@@ -1,15 +1,16 @@
-package anjithsasindran.projectdemoanjith;
+package anjithsasindran.projectdemoanjith.models;
 
 import android.net.Uri;
 
 import java.util.Calendar;
 import java.util.List;
 
-import anjithsasindran.projectdemoanjith.helpers.ParseToCalendar;
+import anjithsasindran.projectdemoanjith.helpers.ParseToCalendarHelper;
 
 /**
  * Created by Anjith Sasindran
  * on 20-Mar-16.
+ * POJO class which is passed to adapter of RecyclerView in EventDiscoveryFragment
  */
 public class EventDetails {
 
@@ -50,7 +51,7 @@ public class EventDetails {
     }
 
     public void setEventStartCalendar(String eventStartDate) {
-        this.eventStartCalendar = ParseToCalendar.convertStringDateToCalendar(eventStartDate);
+        this.eventStartCalendar = ParseToCalendarHelper.convertStringDateToCalendar(eventStartDate);
     }
 
     public Calendar getEventEndCalendar() {
@@ -58,7 +59,7 @@ public class EventDetails {
     }
 
     public void setEventEndCalendar(String eventEndDate) {
-        this.eventEndCalendar = ParseToCalendar.convertStringDateToCalendar(eventEndDate);
+        this.eventEndCalendar = ParseToCalendarHelper.convertStringDateToCalendar(eventEndDate);
     }
 
     public String getEventFullAddress() {

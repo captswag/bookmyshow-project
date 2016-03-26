@@ -11,13 +11,26 @@ import java.util.Calendar;
  * on 21-Mar-16.
  * Convert the json date data to Calendar format.
  */
-public class ParseToCalendar {
+public class ParseToCalendarHelper {
 
     public static Calendar convertStringDateToCalendar(String stringDate) {
         StringBuilder stringBuilder = new StringBuilder(stringDate);
         stringBuilder.setCharAt(10, ' ');
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        try {
+            calendar.setTime(sdf.parse(stringBuilder.toString()));
+        } catch (ParseException e) {
+            Log.d("ParseException", e.toString());
+        }
+        return calendar;
+    }
+
+    public static Calendar convertStringDateForTimelineToCalendar(String stringDate) {
+        StringBuilder stringBuilder = new StringBuilder(stringDate);
+        stringBuilder.setCharAt(10, ' ');
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
             calendar.setTime(sdf.parse(stringBuilder.toString()));
         } catch (ParseException e) {

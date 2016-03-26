@@ -20,6 +20,7 @@ import anjithsasindran.projectdemoanjith.parcelable.MicrositeTimeline;
 /**
  * Created by Anjith Sasindran
  * on 22-Mar-16.
+ * FragmentPagerAdapter for EventMicrsoiteFragment
  */
 public class EventMicrositePagerAdapter extends FragmentStatePagerAdapter {
 
@@ -43,25 +44,25 @@ public class EventMicrositePagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 MicrositeKeySpeakersFragment keySpeakersFragment = new MicrositeKeySpeakersFragment();
                 bundle = new Bundle();
-                bundle.putParcelable("data", (Parcelable) this.micrositeViewPagerData.get(0));
+                bundle.putParcelable("data", (Parcelable) this.micrositeViewPagerData.get(position));
                 keySpeakersFragment.setArguments(bundle);
                 return keySpeakersFragment;
             case 1:
                 MicrositeTimelineFragment timelineFragment = new MicrositeTimelineFragment();
                 bundle = new Bundle();
-                bundle.putParcelable("data", (Parcelable) this.micrositeViewPagerData.get(1));
+                bundle.putParcelable("data", (Parcelable) this.micrositeViewPagerData.get(position));
                 timelineFragment.setArguments(bundle);
                 return timelineFragment;
             case 2:
                 MicrositeSponsorListFragment sponsorsListFragment = new MicrositeSponsorListFragment();
                 bundle = new Bundle();
-                bundle.putParcelable("data", (Parcelable) this.micrositeViewPagerData.get(2));
+                bundle.putParcelable("data", (Parcelable) this.micrositeViewPagerData.get(position));
                 sponsorsListFragment.setArguments(bundle);
                 return sponsorsListFragment;
             case 3:
                 MicrositeDescriptionFragment descriptionFragment = new MicrositeDescriptionFragment();
                 bundle = new Bundle();
-                bundle.putParcelable("data", (Parcelable) this.micrositeViewPagerData.get(3));
+                bundle.putParcelable("data", (Parcelable) this.micrositeViewPagerData.get(position));
                 descriptionFragment.setArguments(bundle);
                 return descriptionFragment;
         }

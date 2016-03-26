@@ -9,7 +9,7 @@ import java.io.InputStream;
 /**
  * Created by Anjith Sasindran
  * on 20-Mar-16.
- * Read discovery_event_list.json from assets folder
+ * Read json files from assets folder
  */
 public class JsonReaderFromAssets {
 

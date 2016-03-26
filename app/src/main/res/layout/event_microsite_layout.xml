@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/default_background"
@@ -28,8 +27,7 @@
                     android:layout_height="@dimen/banner_image_view"
                     android:contentDescription="@string/banner_image"
                     android:scaleType="centerCrop"
-                    app:layout_collapseMode="parallax"
-                    tools:src="@mipmap/clear_water_beach" />
+                    app:layout_collapseMode="parallax" />
 
                 <View
                     android:layout_width="match_parent"
@@ -58,10 +56,17 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <ProgressBar
+        android:id="@+id/microsite_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
     <android.support.v4.view.ViewPager
         android:id="@+id/microsite_view_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </android.support.design.widget.CoordinatorLayout>
