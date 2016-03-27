@@ -25,6 +25,7 @@ public class EventsDiscoveryViewHolder extends RecyclerView.ViewHolder {
     public final LinearLayout eventCardImageTextContainer;
     public final TextView eventFullAddress;
     public final TextView eventDate;
+    public final Button eventTicketButton;
     public final Button eventLocationButton;
 
     public EventsDiscoveryViewHolder(View itemView) {
@@ -38,6 +39,7 @@ public class EventsDiscoveryViewHolder extends RecyclerView.ViewHolder {
         eventCardImageTextContainer = (LinearLayout) itemView.findViewById(R.id.event_card_image_text_container);
         eventFullAddress = (TextView) itemView.findViewById(R.id.event_full_address);
         eventDate = (TextView) itemView.findViewById(R.id.event_date);
+        eventTicketButton = (Button) itemView.findViewById(R.id.event_ticket_button);
         eventLocationButton = (Button) itemView.findViewById(R.id.event_location_button);
     }
 }

@@ -135,7 +135,7 @@ public class MicrositeKeySpeakers implements Parcelable {
         parcel.writeString(forthImage);
     }
 
-    protected MicrositeKeySpeakers(Parcel in) {
+    private MicrositeKeySpeakers(Parcel in) {
         firstHeader = in.readString();
         secondHeader = in.readString();
         thirdHeader = in.readString();

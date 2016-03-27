@@ -80,7 +80,7 @@ public class MicrositeDescription implements Parcelable {
         parcel.writeString(thirdPara);
     }
 
-    protected MicrositeDescription(Parcel in) {
+    private MicrositeDescription(Parcel in) {
         this.firstHeader = in.readString();
         this.firstPara = in.readString();
         this.secondHeader = in.readString();

@@ -135,7 +135,7 @@ public class MicrositeSponsorsList implements Parcelable {
         parcel.writeString(secondImageUrl);
     }
 
-    protected MicrositeSponsorsList(Parcel in) {
+    private MicrositeSponsorsList(Parcel in) {
         firstHeader = in.readString();
         secondHeader = in.readString();
         thirdHeader = in.readString();

@@ -266,7 +266,7 @@ public class MicrositeTimeline implements Parcelable {
         parcel.writeString(timelineDate6);
     }
 
-    protected MicrositeTimeline(Parcel in) {
+    private MicrositeTimeline(Parcel in) {
         firstHeader = in.readString();
         secondHeader = in.readString();
         thirdHeader = in.readString();

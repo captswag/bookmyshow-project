@@ -118,6 +118,9 @@ public class EventsDiscoveryAdapter extends RecyclerView.Adapter<EventsDiscovery
             }
         });
 
+        if (holder.eventDay.getText().equals("Expired"))
+            holder.eventTicketButton.setEnabled(false);
+
         holder.eventCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

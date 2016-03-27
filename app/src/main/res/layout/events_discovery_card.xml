@@ -109,6 +109,7 @@
             android:paddingBottom="@dimen/_8dp">
 
             <Button
+                android:id="@+id/event_ticket_button"
                 style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

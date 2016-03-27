@@ -8,18 +8,16 @@ import anjithsasindran.projectdemoanjith.fragments.EventDiscoveryFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    FragmentManager mFragmentManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mFragmentManager = getSupportFragmentManager();
-        setupEventDiscoveryFragment();
+        FragmentManager mFragmentManager = getSupportFragmentManager();
+        setupEventDiscoveryFragment(mFragmentManager);
     }
 
-    public void setupEventDiscoveryFragment() {
+    private void setupEventDiscoveryFragment(FragmentManager mFragmentManager) {
         mFragmentManager.beginTransaction()
                 .add(R.id.root_container, new EventDiscoveryFragment())
                 .commit();

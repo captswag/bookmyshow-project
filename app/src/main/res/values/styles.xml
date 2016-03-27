@@ -8,6 +8,10 @@
         <item name="colorControlHighlight">@color/amber_500</item>
     </style>
 
+    <style name="EventMicrositeBackground" parent="Widget.Design.CoordinatorLayout">
+        <item name="android:background">@color/default_background</item>
+    </style>
+
     <style name="EventDiscoveryBannerSubText" parent="TextAppearance.AppCompat">
         <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:textColor">@color/white</item>
