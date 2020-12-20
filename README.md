@@ -1,4 +1,4 @@
-#BookMyShow Project
+# BookMyShow Project
 
 This is a demo project, which I did as part of BookMyShow's interview process.
 I was provided with multiple JSON files, and asked me to build an Android app,
